@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{A15FCE11-1938-4E59-96A4-57015EF94495}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Test\ipapiWithDelphi_tests.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ipapiWithDelphi.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ipapiWithDelphi_tests">
+        <MSBuild Projects="Test\ipapiWithDelphi_tests.dproj"/>
+    </Target>
+    <Target Name="ipapiWithDelphi_tests:Clean">
+        <MSBuild Projects="Test\ipapiWithDelphi_tests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ipapiWithDelphi_tests:Make">
+        <MSBuild Projects="Test\ipapiWithDelphi_tests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ipapiWithDelphi">
+        <MSBuild Projects="ipapiWithDelphi.dproj"/>
+    </Target>
+    <Target Name="ipapiWithDelphi:Clean">
+        <MSBuild Projects="ipapiWithDelphi.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ipapiWithDelphi:Make">
+        <MSBuild Projects="ipapiWithDelphi.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ipapiWithDelphi_tests;ipapiWithDelphi"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ipapiWithDelphi_tests:Clean;ipapiWithDelphi:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ipapiWithDelphi_tests:Make;ipapiWithDelphi:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

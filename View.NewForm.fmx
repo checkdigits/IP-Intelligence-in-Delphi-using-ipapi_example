@@ -1,0 +1,231 @@
+inherited NewFormFrame: TNewFormFrame
+  Size.Width = 381.000000000000000000
+  Size.Height = 653.000000000000000000
+  inherited MainLayout: TGridPanelLayout
+    Size.Width = 381.000000000000000000
+    Size.Height = 653.000000000000000000
+    ControlCollection = <
+      item
+        Column = 0
+        Control = HeaderRect
+        Row = 0
+      end
+      item
+        Column = 0
+        Control = Lyt
+        Row = 1
+      end
+      item
+        Column = 0
+        Control = LytCoord
+        Row = 2
+      end
+      item
+        Column = 0
+        Control = LytIPLocationFlag
+        Row = 3
+      end
+      item
+        Column = 0
+        Control = LytCityZipCode
+        Row = 4
+      end>
+    RowCollection = <
+      item
+        Value = 12.035403915032790000
+      end
+      item
+        Value = 28.031772560420320000
+      end
+      item
+        SizeStyle = Auto
+        Value = 15.000000000000000000
+      end
+      item
+        Value = 15.195483346542270000
+      end
+      item
+        Value = 16.070791410976970000
+      end
+      item
+        Value = 28.666548767027630000
+      end>
+    inherited HeaderRect: TRectangle
+      Size.Width = 381.000000000000000000
+      Size.Height = 72.573493957519530000
+      inherited CaptionLbl: TLabel
+        Size.Width = 381.000000000000000000
+        Size.Height = 69.573493957519530000
+        TextSettings.Font.StyleExt = {00060000000000000004000000}
+        Text = 'IP Intelligence in Delphi'
+        inherited HamburgerImg: TPath
+          Size.Height = 52.573493957519530000
+          inherited HitBox: TLayout
+            Size.Height = 58.573493957519530000
+          end
+        end
+      end
+    end
+    object Lyt: TLayout
+      Align = Client
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 371.000000000000000000
+      Size.Height = 159.031616210937500000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object EdtIP: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 1
+        TextSettings.Font.Size = 16.000000000000000000
+        Position.X = 8.000000000000000000
+        Position.Y = 94.000000000000000000
+        Size.Width = 161.000000000000000000
+        Size.Height = 27.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = '12.934.211.001'
+        StyledSettings = [Family, Style, FontColor]
+      end
+      object BtnCheckIP: TButton
+        Anchors = [akLeft, akTop, akRight]
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 184.000000000000000000
+        Position.Y = 34.000000000000000000
+        Size.Width = 177.000000000000000000
+        Size.Height = 89.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Check IP'
+        TextSettings.Font.Size = 16.000000000000000000
+        OnClick = BtnCheckIPClick
+      end
+      object EdtAccKey: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 0
+        TextSettings.Font.Size = 16.000000000000000000
+        Position.X = 8.000000000000000000
+        Position.Y = 38.000000000000000000
+        Size.Width = 161.000000000000000000
+        Size.Height = 27.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'API Access Key'
+        StyledSettings = [Family, Style, FontColor]
+      end
+    end
+    object LytCoord: TLayout
+      Align = Client
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 371.000000000000000000
+      Size.Height = 39.999938964843750000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object LblLatitude: TLabel
+        AutoSize = True
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 8.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 161.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 16.000000000000000000
+        Text = 'Latitude: '
+        TabOrder = 1
+      end
+      object LblLongitude: TLabel
+        Anchors = [akTop, akRight]
+        AutoSize = True
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 206.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 174.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 16.000000000000000000
+        Text = 'Longtitude: '
+        TabOrder = 0
+      end
+    end
+    object LytIPLocationFlag: TLayout
+      Align = Client
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 371.000000000000000000
+      Size.Height = 81.628784179687500000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object LblIPLocation: TLabel
+        Align = Center
+        StyledSettings = [Family, Style, FontColor]
+        Size.Width = 233.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 16.000000000000000000
+        Text = 'IP Location: '
+        TabOrder = 0
+      end
+    end
+    object LytCityZipCode: TLayout
+      Align = Client
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 371.000000000000000000
+      Size.Height = 86.906890869140630000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      object LblCity: TLabel
+        Anchors = [akLeft, akTop, akRight]
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 8.000000000000000000
+        Position.Y = 16.000000000000000000
+        Size.Width = 191.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 16.000000000000000000
+        Text = 'City: '
+        TabOrder = 1
+      end
+      object LblZipCode: TLabel
+        Anchors = [akTop, akRight]
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 206.000000000000000000
+        Position.Y = 16.000000000000000000
+        Size.Width = 169.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 16.000000000000000000
+        Text = 'Zip Code: '
+        TabOrder = 0
+      end
+    end
+  end
+  object RESTClient1: TRESTClient
+    Accept = 'application/json, text/plain; q=0.9, text/html;q=0.8,'
+    AcceptCharset = 'utf-8, *;q=0.8'
+    BaseURL = 'http://api.ipapi.com/api/161.185.160.93'
+    Params = <>
+    Left = 80
+    Top = 536
+  end
+  object RESTRequest1: TRESTRequest
+    AssignedValues = [rvConnectTimeout, rvReadTimeout]
+    Client = RESTClient1
+    Params = <>
+    Response = RESTResponse1
+    Left = 176
+    Top = 536
+  end
+  object RESTResponse1: TRESTResponse
+    ContentType = 'application/json'
+    Left = 296
+    Top = 536
+  end
+end
